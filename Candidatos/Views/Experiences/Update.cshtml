@@ -1,0 +1,40 @@
+﻿@using Candidates.Application.DTOs;
+@{
+    ViewData["Title"] = "Update Experience";
+}
+@model CandidateExperienceDto
+
+
+<div class="text-center">
+    <h1>Update Experience</h1>
+</div>
+
+<form method="post" action="/Experiences/SubmitUpdateExperience">
+    <input type="number" name="IdCandidate" value="@Model.IdCandidate" hidden />
+    <input type="number" name="IdCandidateExperience" value="@Model.IdCandidateExperience" hidden />
+    <div class="mb-3">
+        <label for="company" class="form-label">Comapy</label>
+        <input type="text" class="form-control" id="company" name="company" value="@Model.Company" required>
+    </div>
+    <div class="mb-3">
+        <label for="job" class="form-label">Job</label>
+        <input type="text" class="form-control" id="job" name="job" value="@Model.Job" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="@Model.Description" required>
+    </div>
+    <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="salary" name="salary" value="@Model.Salary" required>
+    </div>
+    <div class="mb-3">
+        <label for="beginDate" class="form-label">Begin Date</label>
+        <input type="date" class="form-control" id="beginDate" name="beginDate" value="@Model.BeginDate.ToString("yyyy-MM-dd")" required>
+    </div>
+    <div class="mb-3">
+        <label for="endDate" class="form-label">End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

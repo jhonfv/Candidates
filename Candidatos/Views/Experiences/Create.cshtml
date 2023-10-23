@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Add Experience";
+}
+<div class="text-center">
+    <h1>Add new Experience</h1>
+</div>
+
+<form method="post" action="/Experiences/SubmitNewExperience">
+    <input type="number" name="IdCandidate" value="@ViewData["IdCandidate"]" hidden />
+    <div class="mb-3">
+        <label for="company" class="form-label">Comapy</label>
+        <input type="text" class="form-control" id="company" name="company" required>
+    </div>
+    <div class="mb-3">
+        <label for="job" class="form-label">Job</label>
+        <input type="text" class="form-control" id="job" name="job" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" required>
+    </div>
+    <div class="mb-3">
+        <label for="salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="salary" name="salary" required>
+    </div>
+    <div class="mb-3">
+        <label for="beginDate" class="form-label">Begin Date</label>
+        <input type="date" class="form-control" id="beginDate" name="beginDate" required>
+    </div>
+    <div class="mb-3">
+        <label for="endDate" class="form-label">End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
